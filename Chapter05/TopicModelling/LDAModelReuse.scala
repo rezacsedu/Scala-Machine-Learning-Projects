@@ -17,7 +17,7 @@ object LDAModelReuse {
 
     val lda = new LDAforTM() // actual computations are done here
     val defaultParams = Params().copy(input = "data/4UK1UkTX.csv", savedLDAModel) // Loading the parameters to train the LDA model
-    lda.run(defaultParams) // Training the LDA model with the default parameters. 
+    lda.run(defaultParams, true) // Training the LDA model with the default parameters. 
     spark.stop()
   }
 }
